@@ -48,6 +48,7 @@ fn main() -> Result<()> {
 
             thread::spawn(move || -> Result<()> {
                 let mut buf = [0; 1024];
+
                 loop {
                     let read_bytes = stream.read(&mut buf)?;
 
